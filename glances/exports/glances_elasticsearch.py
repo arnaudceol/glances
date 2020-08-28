@@ -60,7 +60,6 @@ class Export(GlancesExport):
         self.index='{}-{}'.format(self.index, datetime.utcnow().strftime("%Y.%m.%d"))
         template_body =  {
           "mappings": {
-            "glances": {
               "dynamic_templates": [
                 {
                   "integers": {
@@ -85,7 +84,6 @@ class Export(GlancesExport):
                   }
                 }
               ]
-            }
           }
         }
 
